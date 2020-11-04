@@ -1,0 +1,188 @@
+:root{
+    --bg-border-rad:8px;
+    --mini-border-rad:4px;
+    --main-color:#282c34; 
+}
+body{
+    margin: 0;
+    font-family:'Monserrat', sans-serif;
+}
+.App {
+    background-color: var(--main-color);
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    min-height: 700px;
+}
+
+.main-box{
+    height: 60%;
+    max-width: 900px;
+    min-height: 500px;
+    width: 90%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.memory-table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap:10px;
+    height:98%;
+    width: 98%;
+    background-color: blanchedalmond;
+    border: 2px solid black;
+    border-radius: 8px;
+
+    padding: 1rem;
+}
+img {
+    display: none;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.card{
+    border: 2px solid black;
+    border-radius:4px;
+    background-color:var(--main-color);
+    border-radius: 4px;  
+    cursor: pointer;
+    justify-self: stretch;
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    width: 100%;
+    height: 100%;
+    transition: 200ms all linear;
+}
+.control{
+    text-align: center;
+    margin: 0 auto;
+}
+.card:hover {
+    opacity: 0.5;
+  }
+  
+.elem{
+    color:var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: var(--mini-border-rad);
+    max-height: 100px;
+    font-size: 12px;
+}
+.restart {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-color);
+    background-color:white;
+    border:1px solid var(--main-color);
+    font-size:.9rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    padding: 0.25em 0.75em;
+    min-width: 10ch;
+    min-height: 44px;
+    font-family: inherit;
+    transition: 220ms all ease-in-out;
+    cursor: pointer;
+}
+
+.restart:hover{
+    background-color: var(--main-color);;
+    color: white;
+    border:1px solid white;
+}
+
+/*affected by Javascript*/
+#container{
+    animation-name: hide;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+#grow-box{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-name: grow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+.main-img{
+    width: 100%;
+}
+#info{
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #282c34;
+    animation-name: info;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+@keyframes hide{
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes grow {
+    0% {
+        width: 1%;
+        height: 1%;
+        margin: 0 auto;
+        background-color: blanchedalmond;
+        border: 2px solid black;
+        padding: 1rem;
+    }
+
+    100% {
+        width: 98%; 
+        height: 98%;
+        margin: 0 auto;
+        background-color: blanchedalmond;
+        border: 2px solid black;
+        padding: 1rem;
+    }
+}
+
+@keyframes info {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@media(min-width:600px){
+    img{
+        max-width: 250px;
+        max-height: 100px;
+    }
+    .main-box{
+        min-height: 700px;
+    }
+
+    .App{
+        min-height: 900px;
+    }
+}
