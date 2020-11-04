@@ -14,7 +14,7 @@
     //function definition
     //secondary functions:
     function randomAnswers() {
-        fetch('http://127.0.0.1:8000/memory/')
+        fetch('https://cristiamportfolioapis.herokuapp.com/memory/')
         .then(response => response.json())
         .then(data =>{ 
             setUp(data)
