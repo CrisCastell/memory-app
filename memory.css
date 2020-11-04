@@ -69,10 +69,7 @@ img {
     text-align: center;
     margin: 0 auto;
 }
-.card:hover {
-    opacity: 0.5;
-  }
-  
+
 .elem{
     color:var(--main-color);
     border: 1px solid var(--main-color);
@@ -123,7 +120,7 @@ img {
 }
 .main-img{
     width: 100%;
-    height: 100%;
+    height: 150px;
 }
 #info{
     text-align: center;
@@ -186,4 +183,8 @@ img {
     .App{
         min-height: 900px;
     }
+    .card:hover {
+        opacity: 0.5;
+      }
+      
 }

@@ -121,7 +121,7 @@
                             const mainImg = document.createElement('img');
                             mainImg.setAttribute('src', answers[0].pic);
                             mainImg.setAttribute('class', 'main-img')
-                            mainImg.style.display = 'block'
+                            mainImg.style.display = 'block';
                             title.innerHTML = `You won in ${time} seconds`;
                             secTitle.innerHTML = 'Did you know?';
                             message.innerHTML = answers[0].fact;
